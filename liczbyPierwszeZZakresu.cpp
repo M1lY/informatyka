@@ -2,8 +2,8 @@
 #include<cmath>
 using namespace std;
 int main(){
-	int n;
-	bool b;
+    int n;
+    bool b;
     cin>>n;
     for(int i=2; i<=n; i++){
     	b=1;
