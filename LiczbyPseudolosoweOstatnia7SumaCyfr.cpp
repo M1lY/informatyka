@@ -6,7 +6,7 @@
 using namespace std;
 
 int tab[15];
-int s;
+int s=0;
 
 int main(){
     srand(time(NULL));
@@ -27,7 +27,13 @@ int main(){
 
     cout<<"Liczby ktorych suma cyfr jest liczba parzysta:";
     for(int i=0;i<15;i++){
-        if((tab[i]%10+tab[i]%100+tab[i]%1000)%2==0) cout<<setw(4)<<tab[i];
+        s=0;
+        int x=tab[i];
+        while(x>0){
+            s+=x%10;
+            x/=10;
+        }
+        if(s%2==0)cout<<setw(4)<<tab[i];
     }
     
     return 0;
