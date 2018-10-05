@@ -7,7 +7,7 @@ int main(){
     switch(znak){
         case 'i': cout<<"Piotr"; break;
         case 'n': cout<<"Milewski"; break;
-        default: cout<<"Bledny znak";
+        default: cout<<"Bledny znak"; break;
     }
     return 0;
 }
