@@ -7,17 +7,17 @@ bool anagramy(char w[], char w1[]){
 	char temp[d1+1];
 	if(d!=d1) return false;
 	strcpy(temp,w1);
-    bool b;
+	bool b;
 	for(int i=0; i<d; i++){
-        b=false;
+        	b=false;
 		for(int j=0; j<d1; j++){
 			if(w[i]==temp[j]){
-                temp[j]='/0';
-                b=true;
+                		temp[j]='/0';
+                		b=true;
 				break;
-            }
+            		}
 		}
-        if(b==false) return false;
+        	if(b==false) return false;
 	}
 	return true;
 }
