@@ -11,7 +11,7 @@ bool anagram(string wyrazA, string wyraz1){
 		b=false;
 		for(int j=0; j<da; j++){
 			if(wyraz1[i]==temp[j]){
-				temp[j]='/0';
+				temp[j]='\0';
 				b=true;
 				break;
 			}
