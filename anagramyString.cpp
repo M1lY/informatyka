@@ -13,6 +13,7 @@ bool anagram(string wyrazA, string wyraz1){
 			if(wyraz1[i]==temp[j]){
                 temp[j]='/0';
                 b=true;
+                break;
             }
 		}
         if(b==false) return false;
@@ -27,7 +28,6 @@ int main(){
     string wyrazA, wyraz1;
     int j=0;
     for(int i=0; i<d; i++){
-        cout<<i;
         if(tekst[i]!=' '){
             wyrazA+=tekst[i];
         }else{
