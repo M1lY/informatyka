@@ -36,11 +36,13 @@ bool czySamogloska(string wyraz){
 bool anagram(string w1, string wA){
     int d1=w1.size();
     int dA=wA.size();
+	if(dA!=d1) return false;
     bool b;
     for(int i=0;i<d1;i++){
         b=false;
         for(int j=0;j<dA;j++){
             if(w1[i]==wA[j]){
+                wA[j]='\0';
                 b=true;
                 break;
             }
@@ -80,20 +82,26 @@ int main(){
             wyraz="";
         }
     }
-    if(czySamogloska(wyraz)) cout<<wyraz<<endl;
+    if(czySamogloska(wyraz)) cout<<wyraz;
+    cout<<endl;
 
     string wyraz1;
     string wyrazA;
+    int dZ = zdanie.size();
     int w=0;
-    for(int i=0;zdanie[i]!='.';i++){
-        if(zdanie[i]!=' ') wyrazA+=zdanie[i];
-        else{
+    for(int i=0;dZ;i++){
+        if(zdanie[i]!=' '&&zdanie[i]!='.'){
+            wyrazA+=zdanie[i];
+        }else{
             if(w==0){
                 wyraz1=wyrazA;
                 cout<<"Anagramy wyrazu "<<wyraz1<<": ";
                 w++;
+                wyrazA="";
+                continue;
+            }else if(anagram(wyraz1, wyrazA)){
+                cout<<wyrazA<<" ";
             }
-            if(anagram(wyraz1, wyrazA)) cout<<wyraz<<endl;
             wyrazA="";
         }
     }
