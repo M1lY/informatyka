@@ -2,6 +2,7 @@
 #include <iomanip>
 #include <time.h>
 #include <cmath>
+#include <cstdlib>
 using namespace std;
 const int n=21;
 
@@ -18,7 +19,7 @@ int main(){
     int p=0,z=0;
 
     cout<<"Tablica A: ";
-    for(int i=0;i<21;i++){
+    for(int i=0;i<n;i++){
         A[i]=rand()%90+10;
         cout<<setw(3)<<A[i];
     }
