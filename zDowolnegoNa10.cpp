@@ -7,7 +7,7 @@ int dec(string n, int x){
     if(int(n[0]-'7')<10) y=int(n[0]-'0');
     else y=int(n[0]-'7');
     for(int i=1;i<d;i++){
-        if(int(n[0]-'7')<10) y=y*x+int(n[i]-'0');
+        if(int(n[i]-'7')<10) y=y*x+int(n[i]-'0');
         else y=y*x+int(n[i]-'7');
     }
     return y;
