@@ -5,7 +5,7 @@
 using namespace std;
 
 const int n = 10;
-void sortWstawRos(int tab[]){
+void sortWyborRos(int tab[]){
     int min;
     for(int i=0;i<n-1;i++){
         min=i;
@@ -15,7 +15,7 @@ void sortWstawRos(int tab[]){
         swap(tab[min],tab[i]);
     }
 }
-void sortWstawMalej(int tab[]){
+void sortWyborMalej(int tab[]){
 	int max;
 	for(int i=0;i<n-1;i++){
 		max=i;
@@ -30,10 +30,10 @@ int main(){
     int tab[n];
     for(int i=0;i<n;i++) tab[i]=rand()%90+10;
     for(int i=0;i<n;i++) cout<<setw(3)<<tab[i];
-    sortWstawRos(tab);
+    sortWyborRos(tab);
     cout<<endl<<"Rosnaco: ";
     for(int i=0;i<n;i++) cout<<setw(3)<<tab[i];
-    sortWstawMalej(tab);
+    sortWyborMalej(tab);
     cout<<endl<<"Majeaco: ";
     for(int i=0;i<n;i++) cout<<setw(3)<<tab[i];
     return 0;
