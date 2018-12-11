@@ -6,7 +6,7 @@ using namespace std;
 const int n=10;
 
 void sortBabel(int tab[]){
-	for(int i=n-1;i>1;i--){
+	for(int i=n-1;i>0;i--){
 		for(int j=0;j<i;j++){
 			if(tab[j]>tab[j+1]) swap(tab[j],tab[j+1]);
 		}
