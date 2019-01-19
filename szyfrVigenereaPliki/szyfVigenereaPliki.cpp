@@ -3,7 +3,7 @@
 using namespace std;
 ifstream weTekst("dane.txt");
 ifstream weKlucz("klucz.txt");
-ofstream wy("wynik");
+ofstream wy("wynik.txt");
 
 string szyfrVigener(string s, string k){
 	string szyfr="";
@@ -23,5 +23,6 @@ int main(){
 	while(weTekst>>s){
 		weKlucz>>k;
 		cout<<szyfrVigener(s,k)<<endl;
+		wy<<szyfrVigener(s,k)<<endl;
 	}
 }
