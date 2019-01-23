@@ -9,7 +9,6 @@ string szyfrPrzestawieniowy(string s, int k){
 	k=ceil((float)d / (float)k);
 	int l=0;
 	for(int i=0; i<k; i++){
-		int j=i;
 		int g=0;
 		for(int j=i; j<=d; g++){
 			if(l==d) break;

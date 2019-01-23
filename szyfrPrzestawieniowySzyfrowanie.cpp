@@ -6,7 +6,6 @@ string szyfrPrzestawieniowy(string s, int k){
 	int d=s.size();
 	k%=d;
 	for(int i=0; i<k; i++){
-		int j=i;
 		for(int j=i; j<d; j+=k){
 			szyfr+=s[j];
 		}
