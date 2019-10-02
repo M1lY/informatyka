@@ -2,8 +2,8 @@
 using namespace std;
 
 int dec(int d, string x, int p){
-	if(d==0) return int(x[0]-'7')<10?int(x[0]-'0'):int(x[0]-'7');
-	return int(x[d]-'7')<10?p*dec(d-1,x,p)+int(x[d]-'0'):p*dec(d-1,x,p)+int(x[d]-'7');
+	if(d-1==0) return int(x[0]-'7')<10?int(x[0]-'0'):int(x[0]-'7');
+	return int(x[d-1]-'7')<10?p*dec(d-1,x,p)+int(x[d-1]-'0'):p*dec(d-1,x,p)+int(x[d-1]-'7');
 }
 int main(){
 	string x;
@@ -13,6 +13,6 @@ int main(){
     cout<<"Liczba do zamiany=";
     cin>>x;
     int d=x.size();
-    cout<<dec(d-1,x,p);
+    cout<<dec(d,x,p);
     return 0;
 }
